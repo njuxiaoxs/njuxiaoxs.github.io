@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/anhui.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/aomen.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/beijing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/chongqing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/fujian.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/gansu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guizhou.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hainan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hebei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/heilongjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/henan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hubei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hunan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangsu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jilin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/liaoning.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/neimenggu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/ningxia.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/qinghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/sichuan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/taiwan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/tianjin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xianggang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xinjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xizang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/yunnan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/zhejiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM "></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js "></script>
+</head>
+
+<body>
+    <div id="main" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+    "title": {
+        "text": "",
+        "subtext": "",
+        "left": "auto",
+        "textStyle": {
+            "color": "#000",
+            "fontSize": 18
+        },
+        "subtextStyle": {
+            "color": "#aaa",
+            "fontSize": 12
+        }
+    },
+    "toolbox": {
+        "show": true,
+        "orient": "vertical",
+        "left": "right",
+        "top": "center",
+        "feature": {
+            "saveAsImage": {
+                "show": true
+            }
+        }
+    },
+    "tooltip": {},
+    "series": [
+        {
+            "type": "candlestick",
+            "name": "黄金ETF",
+            "data": [
+                [
+                    2.792,
+                    2.788,
+                    2.797,
+                    2.787
+                ],
+                [
+                    2.79,
+                    2.788,
+                    2.791,
+                    2.786
+                ],
+                [
+                    2.765,
+                    2.745,
+                    2.767,
+                    2.736
+                ],
+                [
+                    2.732,
+                    2.747,
+                    2.749,
+                    2.731
+                ],
+                [
+                    2.745,
+                    2.738,
+                    2.748,
+                    2.737
+                ],
+                [
+                    2.741,
+                    2.741,
+                    2.746,
+                    2.734
+                ],
+                [
+                    2.731,
+                    2.726,
+                    2.731,
+                    2.723
+                ],
+                [
+                    2.726,
+                    2.731,
+                    2.735,
+                    2.726
+                ],
+                [
+                    2.737,
+                    2.739,
+                    2.743,
+                    2.733
+                ],
+                [
+                    2.74,
+                    2.75,
+                    2.753,
+                    2.739
+                ]
+            ],
+            "markPoint": {
+                "data": []
+            },
+            "markLine": {
+                "data": []
+            }
+        }
+    ],
+    "legend": {
+        "data": [
+            "黄金ETF"
+        ],
+        "selectedMode": true,
+        "show": true,
+        "left": "center",
+        "top": "top",
+        "orient": "horizontal"
+    },
+    "backgroundColor": "#fff",
+    "xAxis": {
+        "type": "category",
+        "data": [
+            "2017-05-02",
+            "2017-05-03",
+            "2017-05-04",
+            "2017-05-05",
+            "2017-05-08",
+            "2017-05-09",
+            "2017-05-10",
+            "2017-05-11",
+            "2017-05-12",
+            "2017-05-15"
+        ],
+        "scale": true,
+        "boundaryGap": false
+    },
+    "yAxis": {
+        "scale": true,
+        "splitArea": {
+            "show": true
+        }
+    },
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597",
+        "#f6f5ec"
+    ]
+};
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
