@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index_mj</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+
+pre, code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+
+pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block; !important;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+
+p {
+  margin: 1.5em 5px !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 10px 5px;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px;
+}
+
+li p {
+  margin: 10px 0 !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+</head>
+<body>
+<h1>多因子模型（指数增强）</h1>
+<h2>1. 策略简介</h2>
+<p>多因子模型是量化选股领域应用最为广泛和成熟的方法，通过对股票收益率相关的因子进行检验和筛选，找到能够在未来一定期限内预测股票收益的特征，寻找与市场不相关的阿尔法，成为衡量一家量化基金的基本标准。随着大数据和计算机能力的跨越式发展，机器学习和人工智能技术在股票投资领域的应用不断深化，目前我司已建立了多因子和机器学习为主的两套研究框架体系，旨在不断的市场进化中，始终具备为投资者提供具有风险收益比的产品和服务。</p>
+<p><center></p>
+<img src="plot/1.jpg" width="400" height="250" alt="桥水全天候净值"/>
+<p></center></p>
+<p>多因子模型最为根本的方法是从舆情、估值、动量、成长、一致预期等多个方面寻找指导股票价格的前瞻性指标，并通过组合权重的优化或行业、市值等中性化的处理来减小权益的波动。</p>
+<p><center></p>
+<img src="plot/2.png" width="600" height="280" alt="nav"/>
+<p></center></p>
+<p>深度学习和强化学习日新月异的发展，为量化投资和智能投顾提供了多种可能。</p>
+<h2>2.净值分析</h2>
+<p>本产品自2014年12月30日起，取得了63%的收益，年化收益23%，相对沪深300跑赢了64%，策略本身具有稳定的跑赢大盘的能力。策略作为量化对冲还是T+0的底仓，策略均表现出优异的赢利能力。</p>
+<p><center></p>
+<img src="plot/3.png" width="800" height="350" alt="nav"/>
+<p></center></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
