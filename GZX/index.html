@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+
+pre, code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+
+pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block; !important;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+
+p {
+  margin: 1.5em 5px !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 10px 5px;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px;
+}
+
+li p {
+  margin: 10px 0 !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+</head>
+<body>
+<h1>股票日内回转策略介绍</h1>
+<h2>1. 策略简介</h2>
+<p>日内回转策略是一种低风险型策略，通过对底仓进行买卖，可以在日内实现回转交易，当日了结获利，无须承担隔日风险。</p>
+
+<h3>1.1 系统优势</h3>
+
+<p>T+0策略本身逻辑并不复杂，但是，如何对全市场3000多个品种，以及其资产配对进行监控，对于交易系统本身有极高要求。
+  因为要对海量的高频数据进行挖掘，回测系统的速度和扩展性也直接影响了策略的上线速度。
+  因此，我们采用了混合云架构，即保证了交易速度，又有极高的扩展性，可以承载巨大的策略并发量。</p>
+<p><center>
+<img src="./plot/trade_server.png" />
+</center></p>
+
+<p>策略近期表现如下图所示（红色为策略净值曲线，黑色为沪深300走势)</p>
+<p><center>
+<img src="./plot/nav.png" />
+</center></p>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
