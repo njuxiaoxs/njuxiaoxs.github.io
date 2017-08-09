@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Universe</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+
+pre, code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+
+pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block; !important;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+
+p {
+  margin: 1.5em 5px !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 10px 5px;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px;
+}
+
+li p {
+  margin: 10px 0 !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+</head>
+<body>
+<h1>全天候大类资产配置池</h1>
+<ol>
+<li>资产A （沪深300， H股， 国债， 黄金， 纳指）</li>
+</ol>
+<p><center></p>
+<img src="btdata/A.png" width="800" height="400" alt="nav"/>
+<p></center></p>
+<table>
+<thead>
+<tr>
+	<th>年化收益率</th>
+	<th>基准年化收益率</th>
+	<th>阿尔法</th>
+	<th>贝塔</th>
+	<th>夏普比率</th>
+	<th>收益波动率</th>
+	<th>信息比率</th>
+	<th>最大回撤</th>
+	<th>换手率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>7.1%</td>
+	<td>4.2%</td>
+	<td>2.7%</td>
+	<td>0.64</td>
+	<td>0.55</td>
+	<td>4.4%</td>
+	<td>0.67</td>
+	<td>4.6%</td>
+	<td>0.71</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>资产B （沪深300， H股， 国债， 黄金， 纳指， 上证50， 创业板， 中证500， 中小板，深100）</li>
+</ol>
+<p><center></p>
+<img src="btdata/B.png" width="800" height="400" alt="nav"/>
+<p></center></p>
+<table>
+<thead>
+<tr>
+	<th>年化收益率</th>
+	<th>基准年化收益率</th>
+	<th>阿尔法</th>
+	<th>贝塔</th>
+	<th>夏普比率</th>
+	<th>收益波动率</th>
+	<th>信息比率</th>
+	<th>最大回撤</th>
+	<th>换手率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>9.7%</td>
+	<td>4.2%</td>
+	<td>5.4%</td>
+	<td>0.52</td>
+	<td>0.64</td>
+	<td>8.0%</td>
+	<td>0.68</td>
+	<td>10.6%</td>
+	<td>1.20</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>资产C （行业ETF）</li>
+</ol>
+<p><center></p>
+<img src="btdata/C.png" width="800" height="400" alt="nav"/>
+<p></center></p>
+<table>
+<thead>
+<tr>
+	<th>年化收益率</th>
+	<th>基准年化收益率</th>
+	<th>阿尔法</th>
+	<th>贝塔</th>
+	<th>夏普比率</th>
+	<th>收益波动率</th>
+	<th>信息比率</th>
+	<th>最大回撤</th>
+	<th>换手率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>9.5%</td>
+	<td>4.2%</td>
+	<td>4.9%</td>
+	<td>0.05</td>
+	<td>0.37</td>
+	<td>13.3%</td>
+	<td>0.43</td>
+	<td>18.7%</td>
+	<td>0.79</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>资产D （资产B + 资产C）</li>
+</ol>
+<p><center></p>
+<img src="btdata/D.png" width="800" height="400" alt="nav"/>
+<p></center></p>
+<table>
+<thead>
+<tr>
+	<th>年化收益率</th>
+	<th>基准年化收益率</th>
+	<th>阿尔法</th>
+	<th>贝塔</th>
+	<th>夏普比率</th>
+	<th>收益波动率</th>
+	<th>信息比率</th>
+	<th>最大回撤</th>
+	<th>换手率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>9.8%</td>
+	<td>4.2%</td>
+	<td>5.3%</td>
+	<td>0.33</td>
+	<td>0.53</td>
+	<td>9.8%</td>
+	<td>0.57</td>
+	<td>13.7%</td>
+	<td>1.15</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
