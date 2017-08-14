@@ -190,11 +190,28 @@ table tr th {
 <p><center></p>
 <img src="plot/photo1_1.png" width="450" height="350" alt="期权介绍"/>
 <p></center></p>
-<p>友山期权策略主要由4+1组成：主要包括波动率交易，趋势交易，50指数增强，套利4个策略模块及1个风险管理模块组成。</p>
+<p>友山期权策略主要由4+1组成：主要包括波动率交易，趋势交易，套利交易，套保交易4个策略模块及1个风险管理模块组成。</p>
 <p><center></p>
-<img src="plot/photo1_2.png" width=600 height=400 alt="策略框架"/>
+<img src="plot/opt.jpeg" width=800 height=600 alt="策略框架"/>
 <p></center></p>
-<h2>2.净值分析</h2>
+<h2>2.希腊字母介绍</h2>
+<p>期权的价格与标的资产价格、标的资产波动率、期权执行价格、期权到期时间、利率等因素有关，通常用希腊字母（Greeks） 表示期权价格对于上述影响因素变化的敏感程度，是期权交易中重要的风险管理指标。</p>
+<center>
+<img src="plot/gks.png" width=397 height=361 alt="greeks"/>
+</center>
+<center>
+<img src="plot/greeks-4.gif" width=397 height=361 alt="计算公式"/>
+</center>
+<h2>3.期权组合策略</h2>
+期权以组合策略多样化著称，无论什么市场状态，都能构造相应的策略来获取利润。
+<center>
+<img src="plot/zhuhe.jpg" width=600 height=400 alt="策略组合"/>
+</center>
+期权策略随着时间的变化，其价值也发生变化。
+<center>
+<img src="plot/decay_with_time.png" width=600 height=400 alt="策略组合"/>
+</center>
+<h2>4.净值分析</h2>
 <p>本策略自2016年起全年取得了37%的累计收益，最大回撤为3.77%。回测收益曲线如下图所示，其中Sharpe:3.71，年化波动率：9.26%。从净值曲线整体上分析，期权的净值符合收益稳定回撤小的特点。</p>
 <p><center></p>
 <img src="plot/nav.png" width="800" height="400" alt="nav"/>
