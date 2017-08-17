@@ -8,6 +8,7 @@
 2. [期权策略](./LXJ/index.html)
 3. [全天候策略](./CW/index.html)
 4. [股票日内回转策略](./GZX/index.html)
+5. [CTA综合策略](./CTA/index.html)
 
 
 ### 固收类策略
