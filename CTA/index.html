@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+
+pre, code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+
+pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block; !important;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+
+p {
+  margin: 1.5em 5px !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 10px 5px;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px;
+}
+
+li p {
+  margin: 10px 0 !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+</head>
+<body>
+<h1>CTA综合策略</h1>
+<h2>1. 策略简介</h2>
+<ul>
+<li>
+<p>CTA量化策略主要包括：趋势追踪、趋势反转、区间震荡、均值回归等，其中尤以趋势追踪最为常用  
+</p>
+</li>
+<li>
+<p>均值回归追求高胜率，虽然单笔交易收益率并不高，但可以广泛应用于跨期、跨品种配对交易，有利于扩大交易范围  
+</p>
+</li>
+<li>
+<p>由于大宗商品价格运行的内在机制，趋势追踪往往能取得非常显著的正收益，而且期货交易可以采用多空策略来进一步扩大交易机会  
+</p>
+</li>
+<li>
+<p>Hurst, Yao and Pedersen (2014)证明了趋势投资法是普世的，在不同的年代不同的资产类别不同的经济周期下都是合适的  
+</p>
+</li>
+</ul>
+<p><br /> </p>
+<p><center></p>
+<img src="plot/trendfollow.png" width="600" height="400" alt="nav"/>
+<img src="plot/meanreverse.png" width="600" height="400" alt="nav"/>
+<p></center></p>
+<p><br /> </p>
+<ul>
+<li>趋势追踪策略的收益高度依赖于趋势的持续时间和累积波幅，特点是亏小钱、挣大钱，通过程序交易严格的交易纪律来保证</li>
+<li>利润锁定主要依靠保本指令，即首次穿越指定价格激活指令，反向二次穿越时触发自动平仓，触发价格由算法浮动给定</li>
+<li>止损和止盈算法综合多种技术指标进行优化，对伪信号干扰进行一定过滤，保证头寸有效停留时间，指标集包括但不限于平均真实波幅（ATR）等</li>
+</ul>
+<p><br /> </p>
+<p><center></p>
+<img src="plot/cases.png" width="700" height="400" alt="nav"/>
+<p></center></p>
+<p><br /> </p>
+<ul>
+<li>CTA整体调整效果：从2006~2016年，除2008年外，都可在不牺牲较大收益的情况下平滑资金曲线，盈亏比有明显提升，收益率最大回撤比有明显提升。</li>
+<li>2016年按照板块进行调整：黑色牺牲了大幅的收益；化工品和农产品改善效果有限；有色有较大改善。</li>
+<li>该调整方法在极端单边行情中会牺牲收益，更有效的手段是直接对整体仓位进行调整，目前计算的仓位应为最大仓位的60%。</li>
+</ul>
+<p><center></p>
+<img src="plot/nav1.png" width="700" height="400" alt="nav"/>
+<p></center></p>
+<table>
+<thead>
+<tr>
+	<th></th>
+	<th>原始曲线</th>
+	<th>调整曲线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>盈亏比</td>
+	<td>1.49</td>
+	<td>1.71</td>
+</tr>
+<tr>
+	<td>收益率</td>
+	<td>30.6%</td>
+	<td>26.8%</td>
+</tr>
+<tr>
+	<td>最大回撤</td>
+	<td>5.5%</td>
+	<td>3%</td>
+</tr>
+<tr>
+	<td>收益率/最大回撤</td>
+	<td>5.6</td>
+	<td>8.8</td>
+</tr>
+</tbody>
+</table>
+<p><br />  </p>
+<ul>
+<li>趋势追踪策略受到伪信号的干扰，在震荡市中收益不显著甚至有损失，而基于价格运行状态识别的CTA量化策略组合，可以获得更稳健的收益</li>
+<li>CTA主观策略基于基本面研究，同样能把握趋势性交易机会，并在震荡市中主动规避低效交易，但存在策略触发机会少、入场点偏左侧等常见问题</li>
+<li>CTA量化策略通过状态识别和信号提取，可以很好支持CTA主观策略，未必需要复杂的量化基本面（Quantmental），量化辅助（Quant Aid）更为有效</li>
+</ul>
+<p><br /> </p>
+<p><center></p>
+<img src="plot/rpm.png" width="600" height="400" alt="nav"/>
+<p></center></p>
+<p><br /> </p>
+<ul>
+<li>从行为金融学角度解读，趋势大体可以分为三个阶段：正常反应（under-reaction）、过度反应（over-reaction）、趋势终结</li>
+<li>宏观研究团队和基本面研究团队提供额外信息，帮助CTA量化策略搜索和聚焦重点品种，提供价格运动方式的预测参考，但不干扰程序交易的实施</li>
+<li>量化团队将量化信号输入动量模型，比照历史统计数据计算潜在胜率和盈亏比，相比主观策略更精准地捕捉趋势信号</li>
+</ul>
+<p><br /> </p>
+<p><center></p>
+<img src="plot/aqr.png" width="600" height="400" alt="nav"/>
+<p></center></p>
+<p><br /> </p>
+<ul>
+<li>统计数据显示，商品期货纯多头的收益归因，大约一半来自绝对价格，另一半来自展期收益；展期收益可以抵消部分价格的不利波动，但只能有限预测价格的波动方向</li>
+<li>对1877~2015年的长期历史数据回测显示，在通胀上升或经济扩张时，远期贴水和升水品种均能取得显著正收益；在通胀下降或经济衰退时，远期升水品种都会出现显著负收益，尤其是经济衰退时</li>
+<li>上述实证研究，为CTA量化策略的多空持仓选择提供了依据，也为全天候策略中增加商品期货配置奠定了基础</li>
+</ul>
+<p><br /> </p>
+<p><center></p>
+<img src="plot/aqr2.png" width="600" height="400" alt="nav"/>
+<p></center></p>
+<p><br /> </p>
+<h2>2.策略配置</h2>
+<ul>
+<li>
+<p>品种选择中，趋势性比较明显的品种加大权重，权重配比采取动态追踪、实时调整，实现利润最大化、回撤最小化。但考虑到趋势行情只占到1/4左右，其余3/4属于震荡行情，还配有相应策略保证震荡市中有小幅盈利，以平滑净值曲线。</p>
+</li>
+<li>
+<p>策略考虑了日内交易手续费和买卖滑点等问题，合理配置了策略频率，中周期和长周期策略超过了一半。在充分保证模型灵敏度的同时，尽量规避交易规则频繁改动对资金曲线的影响。</p>
+</li>
+<li>
+<p>信号触发依据不同频率的K线和均线系统，2小时以内中频信号触发超过2/5。日级别和周级别的低频信号主要用于捕捉大级别机会，并不过度依赖快进快出的高频交易。</p>
+</li>
+</ul>
+<p><center></p>
+<img src="plot/fre.png" width="300" height="300" alt="nav"/>
+<img src="plot/fre2.png" width="300" height="300" alt="nav"/>
+<img src="plot/fre3.png" width="300" height="300" alt="nav"/>
+<p></center></p>
+<h2>3.净值分析</h2>
+<ul>
+<li>以x1倍杠杆将净值标准化，2014~2017年取得了70%的累积回报，对杠杆依赖程度较低</li>
+<li>在2014~2015年的商品熊市中，利用做空机制和策略优势，依然取得了30%的回报</li>
+<li>在2016年底结束趋势行情，进入震荡行情后，净值回撤有效，保持在高位并有所增长</li>
+<li>策略单笔交易的历史胜率在55%~60%范围内，盈亏比在1.5~2.0范围内</li>
+<li>2017年最大浮盈回撤2.4%，最大基本回撤1.6%，有效保护了本金安全</li>
+</ul>
+<p><center></p>
+<img src="plot/nav2.png" width="800" height="450" alt="nav"/>
+<p></center></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
