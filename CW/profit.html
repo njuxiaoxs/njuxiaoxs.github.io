@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>收益追踪</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+
+pre, code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+
+pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block; !important;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+
+p {
+  margin: 1.5em 5px !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 10px 5px;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px;
+}
+
+li p {
+  margin: 10px 0 !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+
+h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+</head>
+<body>
+<h1>收益追踪（8.23）</h1>
+<table>
+<thead>
+<tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>日期</td>
+	<td>单位净值</td>
+	<td>持仓市值</td>
+	<td>持仓当日盈亏</td>
+	<td>当日收益</td>
+	<td>当日收益率</td>
+	<td>当日基准指数</td>
+</tr>
+<tr>
+	<td>2017-07-23</td>
+	<td>1.009</td>
+	<td>100168.2</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-07-24</td>
+	<td>1.0097</td>
+	<td>100239.6</td>
+	<td>71.4</td>
+	<td>71.4</td>
+	<td>0.00070763</td>
+	<td>0.00398836</td>
+</tr>
+<tr>
+	<td>2017-07-25</td>
+	<td>1.0094</td>
+	<td>100212</td>
+	<td>-27.6</td>
+	<td>-27.6</td>
+	<td>-0.00027335</td>
+	<td>-0.00638702</td>
+</tr>
+<tr>
+	<td>2017-07-26</td>
+	<td>1.0087</td>
+	<td>100135.4</td>
+	<td>-76.6</td>
+	<td>-76.6</td>
+	<td>-0.00075884</td>
+	<td>-0.00380975</td>
+</tr>
+<tr>
+	<td>2017-07-27</td>
+	<td>1.0115</td>
+	<td>100422.7</td>
+	<td>287.3</td>
+	<td>287.3</td>
+	<td>0.00284831</td>
+	<td>0.00183687</td>
+</tr>
+<tr>
+	<td>2017-07-28</td>
+	<td>1.0098</td>
+	<td>100243.9</td>
+	<td>-178.8</td>
+	<td>-178.8</td>
+	<td>-0.0017676</td>
+	<td>0.00261212</td>
+</tr>
+<tr>
+	<td>2017-07-29</td>
+	<td>1.0098</td>
+	<td>100243.9</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-07-30</td>
+	<td>1.0098</td>
+	<td>100243.9</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-07-31</td>
+	<td>1.0112</td>
+	<td>100392.7</td>
+	<td>148.8</td>
+	<td>148.8</td>
+	<td>0.00147363</td>
+	<td>0.004294</td>
+</tr>
+<tr>
+	<td>2017-08-01</td>
+	<td>1.0136</td>
+	<td>100630.7</td>
+	<td>238</td>
+	<td>238</td>
+	<td>0.00235354</td>
+	<td>0.00869735</td>
+</tr>
+<tr>
+	<td>2017-08-02</td>
+	<td>1.0145</td>
+	<td>100722.1</td>
+	<td>91.4</td>
+	<td>91.4</td>
+	<td>0.00090172</td>
+	<td>-0.00252767</td>
+</tr>
+<tr>
+	<td>2017-08-03</td>
+	<td>1.0127</td>
+	<td>100537.8</td>
+	<td>-184.3</td>
+	<td>-184.3</td>
+	<td>-0.0018166</td>
+	<td>-0.00878155</td>
+</tr>
+<tr>
+	<td>2017-08-04</td>
+	<td>1.0136</td>
+	<td>100624</td>
+	<td>86.2</td>
+	<td>86.2</td>
+	<td>0.0008512</td>
+	<td>-0.00543126</td>
+</tr>
+<tr>
+	<td>2017-08-05</td>
+	<td>1.0136</td>
+	<td>100624</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-06</td>
+	<td>1.0136</td>
+	<td>100624</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-07</td>
+	<td>1.0142</td>
+	<td>100686.9</td>
+	<td>62.9</td>
+	<td>62.9</td>
+	<td>0.00062059</td>
+	<td>0.00518268</td>
+</tr>
+<tr>
+	<td>2017-08-08</td>
+	<td>1.0133</td>
+	<td>100600.4</td>
+	<td>-86.5</td>
+	<td>-86.5</td>
+	<td>-0.0008529</td>
+	<td>0.00145382</td>
+</tr>
+<tr>
+	<td>2017-08-09</td>
+	<td>1.0124</td>
+	<td>100509</td>
+	<td>-91.4</td>
+	<td>-91.4</td>
+	<td>-0.00090199</td>
+	<td>-0.00031319</td>
+</tr>
+<tr>
+	<td>2017-08-10</td>
+	<td>1.011</td>
+	<td>100366.5</td>
+	<td>-142.5</td>
+	<td>-142.5</td>
+	<td>-0.00140754</td>
+	<td>-0.00405334</td>
+</tr>
+<tr>
+	<td>2017-08-11</td>
+	<td>1.0074</td>
+	<td>100009.5</td>
+	<td>-357</td>
+	<td>-357</td>
+	<td>-0.00353123</td>
+	<td>-0.01845317</td>
+</tr>
+<tr>
+	<td>2017-08-12</td>
+	<td>1.0074</td>
+	<td>100009.5</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-13</td>
+	<td>1.0074</td>
+	<td>100009.5</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-14</td>
+	<td>1.0104</td>
+	<td>100748.2</td>
+	<td>301.3</td>
+	<td>303.59</td>
+	<td>0.00301357</td>
+	<td>0.01297731</td>
+</tr>
+<tr>
+	<td>2017-08-15</td>
+	<td>1.0132</td>
+	<td>101023.8</td>
+	<td>275.6</td>
+	<td>275.6</td>
+	<td>0.00272751</td>
+	<td>0.00307834</td>
+</tr>
+<tr>
+	<td>2017-08-16</td>
+	<td>1.011</td>
+	<td>100798.7</td>
+	<td>-225.1</td>
+	<td>-225.1</td>
+	<td>-0.00222167</td>
+	<td>-0.0012509</td>
+</tr>
+<tr>
+	<td>2017-08-17</td>
+	<td>1.0128</td>
+	<td>100983.4</td>
+	<td>184.7</td>
+	<td>184.7</td>
+	<td>0.00182699</td>
+	<td>0.00536451</td>
+</tr>
+<tr>
+	<td>2017-08-18</td>
+	<td>1.0117</td>
+	<td>100875.3</td>
+	<td>-108.1</td>
+	<td>-108.1</td>
+	<td>-0.00106734</td>
+	<td>0.00091307</td>
+</tr>
+<tr>
+	<td>2017-08-19</td>
+	<td>1.0117</td>
+	<td>100875.3</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-20</td>
+	<td>1.0117</td>
+	<td>100875.3</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>2017-08-21</td>
+	<td>1.0119</td>
+	<td>100891.1</td>
+	<td>15.8</td>
+	<td>15.8</td>
+	<td>0.00015617</td>
+	<td>0.0043814</td>
+</tr>
+<tr>
+	<td>2017-08-22</td>
+	<td>1.0134</td>
+	<td>101045.7</td>
+	<td>154.6</td>
+	<td>154.6</td>
+	<td>0.00152786</td>
+	<td>0.00302163</td>
+</tr>
+<tr>
+	<td>2017-08-23</td>
+	<td>1.014</td>
+	<td>101101.8</td>
+	<td>56.1</td>
+	<td>56.1</td>
+	<td>0.00055357</td>
+	<td>0.00101015</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
